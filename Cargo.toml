@@ -1,0 +1,19 @@
+[package]
+name = "wat"
+version = "0.1.0"
+authors = ["Matt Hunzinger <matthunz2@gmail.com>"]
+edition = "2018"
+
+[lib]
+crate-type = ["staticlib", "cdylib", "rlib"]
+
+[[bin]]
+name = "wat-desktop"
+path = "gen/bin/desktop.rs"
+
+[dependencies]
+dioxus = { git = "https://github.com/dioxuslabs/dioxus", rev = "a3aa6ae771a2d0a4d8cb6055c41efc0193b817ef"}
+dioxus-blitz = { path = "../blitz/packages/dioxus-blitz" }
+
+[target.'cfg(target_os = "android")'.dependencies]
+android-activity = { version = "0.6.0", features = ["native-activity"] }

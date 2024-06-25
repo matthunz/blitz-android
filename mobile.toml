@@ -1,0 +1,8 @@
+[app]
+name = "wat"
+stylized-name = "Wat"
+identifier = "example.com"
+template-pack = "winit"
+
+[apple]
+development-team = "0"
